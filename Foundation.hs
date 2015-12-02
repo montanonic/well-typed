@@ -126,11 +126,43 @@ instance YesodAuth App where
     -- Override the above two destinations when a Referer: header is present
     redirectToReferer _ = True
 
-    authenticate creds = runDB $ do
-        x <- getBy $ UniqueUser $ credsIdent creds
-        return $ case x of
-            Just (Entity uid _) -> Authenticated uid
-            Nothing -> UserError InvalidLogin
+    {- To be overwritten to create a much nicer page with a prominently
+    displayed Persona plugin, and links to material explaining how it works.
+
+    loginHander :: AuthHandler App Html
+    loginHandler = do
+        rtp <- getRouteToParent -- remember, Auth is a subsite, so we need to
+                                     -- to adjust its route accordingly
+                                     -}
+
+
+    -- | I'd like to be able to authenticate users without needing them to exist
+    -- within the database. Using the BrowserID authentication plugin, we'll be
+    -- able to get a verified email from a user (that means, it's both a real
+    -- email, and BrowserID has confirmed that they have access to it).
+    --
+    -- With this verified email (the creds), we'll (1) see if they are already
+    -- in the DB, in which case they're authorized. (2), if they aren't in the
+    -- DB, we'll add them.
+    --
+    -- This means that our authentication automatically registers users. There
+    -- are still a few kinks that will need to be fixed though, namely, that
+    -- we're going to need some methods to allow users to retrieve their
+    -- account if they change their email. We'll try to make this extra layer
+    -- of security as automatic as we can, but we will probably still need the
+    -- users to give us additional information, including other emails that they
+    -- use. Hint: we might want to use psql's temporal fields feature for this.
+    authenticate creds = do
+        let emailIdent = credsIdent creds
+        maybeInDB <- runDB $ getBy $ UniqueUser emailIdent
+
+        case maybeInDB of
+            Just (Entity userId _) -> return $ Authenticated userId
+            Nothing -> do
+                now <- liftIO getCurrentTime
+                userId <- runDB $ insert $
+                    User emailIdent emailIdent Nothing now
+                return $ Authenticated userId
 
     -- You can add other plugins like BrowserID, email or OAuth here
     authPlugins _ = [authBrowserId def]
