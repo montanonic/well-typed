@@ -6,33 +6,14 @@ Copyright (C) 2015 Nicholas Montaño
       it under the terms of the GNU Affero General Public License as published
       by the Free Software Foundation, either version 3 of the License, or
       (at your option) any later version.
-      
+
       This program is distributed in the hope that it will be useful,
       but WITHOUT ANY WARRANTY; without even the implied warranty of
       MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
       GNU Affero General Public License for more details.
-      
+
       You should have received a copy of the GNU Affero General Public License
       along with this program.  If not, see <http://www.gnu.org/licenses/>."
-
-####Nicholas's additions*:
-
-Feel free to modify the program's longer description below to suit any modifications you make, 
-as well as include your name/s and/or the name/s of your organization/s in between the 
-description + copyright + brief license above, and the full license below (in other words, 
-in this section of the license). 
-
-All other parts of the license but these two marked with asterisks ***must*** remain as they are,
-per the licensing terms. You may of course modify or remove these sections of the document,
-though I'd prefer you didn't. Feel free to add your own requests above my additions though, and to
-move these additions below the "Longer program description" if you'd like.
-
-#####Longer program description*: 
-Well-typed is the prototype name for a website/webapp that hopes to 
-provide a cross-language toolkit for creating well-designed online 
-documentation and guides for all things programming and CS.
-
-
 
 GNU Affero General Public License
 =================================

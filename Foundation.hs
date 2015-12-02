@@ -5,7 +5,7 @@ import Database.Persist.Sql (ConnectionPool, runSqlPool)
 import Text.Hamlet          (hamletFile)
 import Text.Jasmine         (minifym)
 import Yesod.Auth.BrowserId (authBrowserId)
-import Yesod.Auth.Message   (AuthMessage (InvalidLogin), defaultMessage)
+import Yesod.Auth.Message   (AuthMessage, defaultMessage)
 import Yesod.Default.Util   (addStaticContentExternal)
 import Yesod.Core.Types     (Logger)
 import qualified Yesod.Core.Unsafe as Unsafe
@@ -160,8 +160,12 @@ instance YesodAuth App where
             Just (Entity userId _) -> return $ Authenticated userId
             Nothing -> do
                 now <- liftIO getCurrentTime
+                -- add user to DB
                 userId <- runDB $ insert $
                     User emailIdent emailIdent Nothing now
+                -- add their registration email to the Email table and label
+                -- it as their primary email.
+                _ <- runDB $ insert $ Email userId emailIdent True
                 return $ Authenticated userId
 
     -- You can add other plugins like BrowserID, email or OAuth here

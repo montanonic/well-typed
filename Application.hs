@@ -14,6 +14,7 @@ module Application
     ) where
 
 import Control.Monad.Logger                 (liftLoc, runLoggingT)
+--import Database.Persist.Sql                 (runMigrationUnsafe)
 import Database.Persist.Postgresql          (createPostgresqlPool, pgConnStr,
                                              pgPoolSize, runSqlPool)
 import Import

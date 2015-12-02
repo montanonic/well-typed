@@ -1,15 +1,24 @@
 User
-    ident Text -- email, from BrowserId
+    ident Text -- from BrowserId; will probably, eventually, add option
+          -- to allow authentication through other services though.
     displayName Text
     realName Text Maybe
     creationDate UTCTime default=now()
 
-    UniqueUser ident
+    UniqueUser ident -- a user's primary email will be their identity under the
+                     -- BrowserID-based auth system we're using currently.
     deriving Typeable
 
 -- One User to many Emails
 Email
-    UniqueEmail Text
-    userId UserId Maybe
+    userId UserId
+    email Text -- each email must be unique
+    isPrimary Bool default='f'
+        -- might want to figure out how to enforce the invariant that
+        -- for any given userId, there is 1 and only 1 True value for isPrimary.
+        -- This of course can be done through careful management in code, but
+        -- it'd be nice if it could be enforced in the DB as well.
+
+    UniqueEmail email -- each email must be unique
 
  -- By default this file is used in Model.hs (which is imported by Foundation.hs)
