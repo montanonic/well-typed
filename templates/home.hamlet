@@ -1,0 +1,18 @@
+<h1>
+  Welcome to <span .siteName>Well Typed</span>!
+
+<h2>
+  _{MsgAlphaHeader}
+
+<p>
+  _{MsgAlpha}
+  _{MsgMissingFeatures}
+
+<p>
+  _{MsgAlphaFeatures}
+  <button .yesodGuide><a>_{MsgYesodGuideButton}
+
+<p>
+  _{MsgOtherThingsToDo}
+  <span .small>_{MsgRegister}
+  <button .register><a>_{MsgRegisterButton}
