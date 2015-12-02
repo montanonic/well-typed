@@ -18,12 +18,14 @@ Copyright (C) 2015 Nicholas Montaño
 ####Nicholas's additions*:
 
 Feel free to modify the program's longer description below to suit any modifications you make, 
-as well as include your name/s or the name of your organization in the license in between the 
-description, copyright, and brief terms above, and the full license below (in other words, 
+as well as include your name/s and/or the name of your organization/s in between the 
+description + copyright + brief license above, and the full license below (in other words, 
 in this section of the license). 
 
 All other parts of the license but these two marked with asterisks ***must*** remain as they are,
-per the licensing terms. 
+per the licensing terms. You may of course modify or remove these sections of the document,
+though I'd prefer you didn't. Feel free to add your own requests above my additions though, and to
+move these additions below the "Longer program description" if you'd like.
       *-- Nicholas*
 
 #####Longer program description*: 
