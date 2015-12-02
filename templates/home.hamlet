@@ -15,7 +15,6 @@
 <p>
   _{MsgOtherThingsToDo}
   <span .small>_{MsgRegister}
-  <button .register href=@{RegisterR}>_{MsgRegisterButton}
 
   <form .buttonLink action=@{AuthR LoginR} method=get>
     <button>Login
