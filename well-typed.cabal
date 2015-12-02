@@ -83,6 +83,7 @@ library
                  , vector
                  , time
                  , esqueleto
+                 , wai
 
 executable         well-typed
     if flag(library-only)
