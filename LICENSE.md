@@ -26,6 +26,7 @@ All other parts of the license but these two marked with asterisks ***must*** re
 per the licensing terms. You may of course modify or remove these sections of the document,
 though I'd prefer you didn't. Feel free to add your own requests above my additions though, and to
 move these additions below the "Longer program description" if you'd like.
+      
       *-- Nicholas*
 
 #####Longer program description*: 
