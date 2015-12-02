@@ -18,11 +18,11 @@ ip-from-header: "_env:IP_FROM_HEADER:false"
 # skip-combining: false
 
 database:
-  user:     "_env:PGUSER:well-typed"
-  password: "_env:PGPASS:well-typed"
+  user:     "_env:PGUSER:welltyped"
+  password: "_env:PGPASS:welltyped"
   host:     "_env:PGHOST:localhost"
   port:     "_env:PGPORT:5432"
-  database: "_env:PGDATABASE:well-typed"
+  database: "_env:PGDATABASE:welltyped"
   poolsize: "_env:PGPOOLSIZE:10"
 
 copyright: This website is licensed under the terms of the AGPL.
