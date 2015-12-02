@@ -1,5 +1,7 @@
 Well-typed is a website platform for documentation and programming guides.
+
 Copyright (C) 2015 Nicholas Montaño
+
       This program is free software: you can redistribute it and/or modify
       it under the terms of the GNU Affero General Public License as published
       by the Free Software Foundation, either version 3 of the License, or
