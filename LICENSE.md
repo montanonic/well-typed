@@ -18,7 +18,7 @@ Copyright (C) 2015 Nicholas Montaño
 ####Nicholas's additions*:
 
 Feel free to modify the program's longer description below to suit any modifications you make, 
-as well as include your name/s and/or the name of your organization/s in between the 
+as well as include your name/s and/or the name/s of your organization/s in between the 
 description + copyright + brief license above, and the full license below (in other words, 
 in this section of the license). 
 
