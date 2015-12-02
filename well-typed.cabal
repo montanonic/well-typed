@@ -82,6 +82,7 @@ library
                  , containers
                  , vector
                  , time
+                 , esqueleto
 
 executable         well-typed
     if flag(library-only)
