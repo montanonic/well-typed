@@ -5,7 +5,7 @@ import Database.Persist.Sql (ConnectionPool, runSqlPool)
 import Text.Hamlet          (hamletFile)
 import Text.Jasmine         (minifym)
 import Yesod.Auth.BrowserId (authBrowserId)
-import Yesod.Auth.Message   (AuthMessage (InvalidLogin))
+import Yesod.Auth.Message   (AuthMessage (InvalidLogin), defaultMessage)
 import Yesod.Default.Util   (addStaticContentExternal)
 import Yesod.Core.Types     (Logger)
 import qualified Yesod.Core.Unsafe as Unsafe
@@ -143,6 +143,9 @@ instance YesodAuthPersist App
 -- achieve customized and internationalized form validation messages.
 instance RenderMessage App FormMessage where
     renderMessage _ _ = defaultFormMessage
+-- Adding instance allow for i18n with Auth Messages
+instance RenderMessage App AuthMessage where
+    renderMessage _ _ = defaultMessage
 
 -- Add i18n messages
 mkMessage "App" "messages" "en"
