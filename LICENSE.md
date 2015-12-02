@@ -15,17 +15,16 @@ Copyright (C) 2015 Nicholas Montaño
       You should have received a copy of the GNU Affero General Public License
       along with this program.  If not, see <http://www.gnu.org/licenses/>."
 
-###Nicholas's additions:
+#####Nicholas's additions*:
 
-Please feel free to modify the Description to suit your needs, and to
-include your name/s in the license below this point if you redistribute any parts 
-of this project, but please ensure that my copyright is clearly stated as the 
-original copyright for the project, as I would like to be attributed for 
-creating this project.
-All other parts of the license but this ***must*** remain as they are. Thank you. 
+Feel free to modify the program's description to suit your modifications, and to
+include your name/s in the license below this point if you redistribute any modified parts 
+of this project.
+All other parts of the license but these two marked with asterisks ***must*** remain as they are,
+per the licensing terms. 
       *-- Nicholas*
 
-####Longer program description: 
+######Longer program description*: 
 Well-typed is the prototype name for a website/webapp that hopes to 
 provide a cross-language toolkit for creating well-designed online 
 documentation and guides for all things programming and CS.
